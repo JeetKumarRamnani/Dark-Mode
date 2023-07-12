@@ -55,6 +55,10 @@ toggleBtn.addEventListener("click", () => {
   body.classList.toggle("bg-[#282c35]");
   headerTitle.classList.toggle("text-white");
   toggleBtn.classList.toggle("text-white");
-  para.classList.toggle("text-white");
-  para.innerHTML = "hello";
+
+  const paras = d.querySelectorAll("#para"); // Get all dynamically created para elements
+
+  paras.forEach((para) => {
+    para.classList.toggle("text-white");
+  });
 });
